@@ -3,4 +3,6 @@ class WelcomeController < ApplicationController
   end
   def newsdetail
   end
+  def peopledetail
+  end
 end

@@ -1,0 +1,61 @@
+.container
+  .row
+    .col-lg-8.col-lg-offset-2
+      .modal-body
+        / Project Details Go Here
+        %h2 DUMBO NGUYỄN & KRISTINA
+        %p.item-intro.text-muted Mã số : 01
+        #jssor_1{:style => "position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; background-color: #24262e;"}
+          / Loading Screen
+          %div{"data-u" => "loading", :style => "position: absolute; top: 0px; left: 0px;"}
+            %div{:style => "filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"}
+            %div{:style => "position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"}
+          %div{"data-u" => "slides", :style => "cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;"}
+            %div{:style => "display: none;"}
+              %img{"data-u" => "image", :src => image_url("slider/01.jpg")}/
+
+            %div{:style => "display: none;"}
+              %img{"data-u" => "image", :src => image_url("slider/02.png")}/
+
+            %div{:style => "display: none;"}
+              %img{"data-u" => "image", :src => image_url("slider/03.jpg")}/
+
+          / Thumbnail Navigator
+          .jssort01{"data-autocenter" => "1", "data-u" => "thumbnavigator", :style => "position:absolute;left:0px;bottom:0px;width:800px;height:100px;"}
+            / Thumbnail Item Skin Begin
+            %div{"data-u" => "slides", :style => "cursor: default;"}
+              .p{"data-u" => "prototype"}
+                .w
+                  .t{"data-u" => "thumbnailtemplate"}
+                .c
+            / Thumbnail Item Skin End
+          / Arrow Navigator
+          %span.jssora05l{"data-u" => "arrowleft", :style => "top:158px;left:8px;width:40px;height:40px;"}
+          %span.jssora05r{"data-u" => "arrowright", :style => "top:158px;right:8px;width:40px;height:40px;"}
+          %a{:href => "http://www.jssor.com", :style => "display:none"} Jssor Slider
+
+        %div.text-justify
+          %p  Dumbo tên thật là Nguyễn Hữu Quốc Vinh. Anh sinh năm 1989 tại Việt Nam và sau đó sang Mỹ định cư từ năm 1999. Dumbo bắt đầu con đường nhảy múa năm 2006 và sau đó thành lập nhóm Poreotics chuyên về Popping, Choreography và Poreotix vào năm 2007. Sau khi thành lập, Poreotics đã đạt nhiều thành công như: Vô địch giải giải Hip hop Mỹ trong hai năm 2009, 2010 và đạt ngôi quán quân mùa thứ 5 của cuộc thi American Best Dance Crew, đạt huy chương bạc Hip hop International Worldwide 2010.
+          %p Sau những thành công với các giải đấu, Dumbo và Poreotics được mời tham gia các chương trình lớn của các ca sĩ nổi tiếng như: Là nhóm nhảy mở màn và là khách mời đặc biệt trong chuyến lưu diễn vòng quanh thế giới của Justin Bieber, tham gia biên đạo MV The Lazy Song của Bruno Mars và MV Somebody to love của Usher… 
+          %p 
+            Thành tích:
+            %ul{style: "font-size:13px;"}
+              %li{:style => "text-align: justify;"}
+                Giải nhất: Kupa Boi-mar Open 2007, Vraca Open 2007, Amarand-M Open 2008.
+              %li{:style => "text-align: justify;"}
+                Giải nhì: Amarand-M Open 2007, Sliven Cup 2007
+              %li{:style => "text-align: justify;"}
+                \&nbsp;Xếp hạng thứ 13 của Giải vô địch nước Đức (trên 10 Vũ điệu)
+              %li{:style => "text-align: justify;"}
+                \&nbsp;Đứng thứ 5 trên Bảng xếp hạng cho thanh niên (thể loại Latin) của Đức
+              %li{:style => "text-align: justify;"}
+                Vào đến vòng chung kết với thứ hạng cao trong nhiều cuộc thi lớn nhất nước Đức
+              %li{:style => "text-align: justify;"}
+                Giải nhì giải Thế giới mở rộng Fred Astaire cho vũ công chuyên nghiệp - điệu Rising Star Smooth.
+              %li{:style => "text-align: justify;"}
+                Đứng thứ 3 giải Vô địch Dancesport toàn nước Mỹ - dành cho vũ công chuyên nghiệp.
+              %li{:style => "text-align: justify;"}
+                Nhiều lần vô địch khu vực Giải New England và New England mở rộng dành cho vũ công chuyên nghiệp - Các điệu Smooth, Rhythm.
+          %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+            %i.fa.fa-times
+            Trở về
