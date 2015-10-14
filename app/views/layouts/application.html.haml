@@ -1,0 +1,17 @@
+!!!
+%html{lang: "en"}
+  %head
+    = render 'head'
+    = stylesheet_link_tag 'application'
+  %body#page-top
+    /header start
+    = render 'top_menu'
+    / header end
+
+    / main content start
+    = render 'layouts/messages'
+    = yield
+    /main content end
+
+    / Placed js at the end of the document so the pages load faster
+    = javascript_include_tag 'application'

@@ -1,0 +1,21 @@
+%nav#mainNav.navbar.navbar-default.navbar-fixed-top.affix.navbar-shrink
+  .container-fluid
+    %img.img-responsive.img-center{:alt => "", :src => image_url('ic_logo.png'),:style=>"float:left;"}
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+  
+    / Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a.page-scroll{:href => "#services"} Trang chủ
+        %li
+          %a.page-scroll{:href => "#portfolio"} Bình chọn
+        %li
+          %a.page-scroll{:href => "#contact"} Liên hệ
+    
