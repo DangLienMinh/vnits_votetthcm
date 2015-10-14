@@ -3,6 +3,7 @@
   %head
     = render 'head'
     = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
   %body#page-top
     /header start
     = render 'top_menu'
@@ -14,5 +15,4 @@
     /main content end
 
     / Placed js at the end of the document so the pages load faster
-    = javascript_include_tag 'application'
     = render 'detail_slider'
