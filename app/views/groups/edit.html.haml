@@ -1,0 +1,14 @@
+%section
+  .container
+    .row
+      .col-md-12
+        %table{:width => "100%"}
+          %tr
+            %td
+              %h1 Chính sửa
+            %td{:align => "right"}
+              %span.icon-share-alt
+              = link_to 'Trở về', groups_path
+        %hr/
+        %br/
+        = render 'form', :action => "update"

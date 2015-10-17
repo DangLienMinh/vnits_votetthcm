@@ -1,0 +1,33 @@
+:css
+  .hid .insert{
+    display: none;
+  }
+
+  input[type=text].link{
+    width: 150px;
+  }
+
+= render 'shared/upload_img', :items => MainSetting.first.slider, :id => "main_setting_banners", :name => "Banners (980 X 480)"
+
+%br/
+= form_for(@item, :url => url_for(:controller => 'admins', :action => :update_config),:html => { :method => :put}) do |f|
+  %fieldset
+    - if @item.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@item.errors.count, "error")
+          prohibited this item from being saved:
+        %ul
+          - @item.errors.full_messages.each do |msg|
+            %li= msg
+  
+  = f.hidden_field :sliders
+  = hidden_field_tag :sliders_link
+
+  %br/
+  %br/
+  .actions
+    = f.submit "Hoàn thành", :class => 'btn', :style => "padding: 10px 20px", :onclick => "update_ids_img();"
+            
+/ :javascript 
+/   inialize_editor('#main_setting_pro_content');

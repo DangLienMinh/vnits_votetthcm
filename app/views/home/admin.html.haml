@@ -1,0 +1,35 @@
+%section
+  .container
+    .row
+      .col-md-12
+        %h2
+          Quản trị
+        -if flash[:msg]
+          .lable.label-info
+            = flash[:msg]
+          %br/
+        .panel.with-nav-tabs.panel-info
+          .panel-heading
+            %ul.nav.nav-tabs
+              %li.active
+                %a{"data-toggle" => "tab", :href => "#tab2info"} Popup
+              %li
+                %a{"data-toggle" => "tab", :href => "#tab3info"} Slider
+              %li
+                %a{"data-toggle" => "tab", :href => "#tab4info"} Người dùng
+              %li
+                %a{"data-toggle" => "tab", :href => "#tab5info"} Giới thiệu
+              %li
+                %a{"data-toggle" => "tab", :href => "#tab6info"} Thể lệ
+          .panel-body
+            .tab-content
+              #tab2info.tab-pane.fade.in.active
+                = render 'promotion'
+              #tab3info.tab-pane.fade
+                = render 'banner'
+              #tab4info.tab-pane.fade
+                = render 'users'
+              #tab5info.tab-pane.fade
+                = render 'introduction'
+              #tab6info.tab-pane.fade
+                = render 'term'

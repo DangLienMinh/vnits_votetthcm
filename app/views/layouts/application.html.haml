@@ -2,17 +2,25 @@
 %html{lang: "en"}
   %head
     = render 'head'
-    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'application', :media => "all"
     = javascript_include_tag 'application'
+    = csrf_meta_tags
   %body#page-top
     /header start
     = render 'top_menu'
+    = render 'admin_nav'
+
     / header end
 
     / main content start
     = render 'layouts/messages'
     = yield
     /main content end
-
+    = render 'shared/login_form'
     / Placed js at the end of the document so the pages load faster
-    = render 'detail_slider'
+    
+:javascript
+  var first_login = "#{session[:first_login].to_json}";
+  initalize();
+- session[:first_login] = true
+      

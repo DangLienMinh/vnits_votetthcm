@@ -1,4 +1,33 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+  devise_for :users, :controllers => {sessions: 'sessions'} do
+    get "sign_out", :to => "devise/sessions#destroy"
+  end
+  get 'home/index'
+
+  get 'home/introduce'
+
+  get 'home/contact'
+
+  get 'home/admin'
+
+  get 'home/setting'
+
+  resources :news,:uploads,:subjects,:sports,:groups
+  resources :home do
+    post 'setting'
+    get 'user'
+    get 'admin'
+  end
+
+  resources :admins do
+    collection do
+      put :update_config
+    end
+  end
+  
+
+  
   get 'welcome/index'
   get 'welcome/newsdetail'
   get 'welcome/peopledetail'

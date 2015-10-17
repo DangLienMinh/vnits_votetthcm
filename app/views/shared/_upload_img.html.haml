@@ -1,0 +1,85 @@
+= form_for Upload.new, :html => { :multipart => true } do |f|
+  .form-group
+    %label.col-md-3.control-label
+      = name
+  .form-group
+    %span.btn.btn-success.fileinput-button
+      %i.glyphicon.glyphicon-plus
+      %span Select files...
+      / The file input field used as target for the file upload widget
+      = f.file_field :image, :id => "#{id}", :multiple => true
+    %br/
+    %br/
+    / The global progress bar
+    #progress.progress
+      .progress-bar.progress-bar-success
+    .clearfix
+.hid{:id => "#{id + '_imgs'}"}
+  - items.each do |item|
+    %span.item{:id => "#{item.id}"}
+      %table
+        %tbody
+          %tr
+            %td
+              %img.img-polaroid{:src => "#{item.image}", :width => "150px"}/
+            %td{:align => "left", :width => "30%"}
+              %a.delete.icon-remove-circle{:href => "#", :onclick => "return del('#{item.id}');"}
+          / %tr
+          /   %td{:colspan => '2'}
+          /     %input{:type=>"text", :class=>"link", :value => item.link}
+:javascript
+  jQuery(window).load(function () {
+        jQuery('#' + "#{id}").fileupload({
+          dataType: 'json',
+          disableImageResize: false,
+          maxFileSize: 10000000,
+          acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+          add: function (e, data) {
+            alert('dkm');
+            jQuery("##{id}_progress " + '.bar').progressbar({
+              value: 5
+            });
+            data.submit();
+          },
+          done: function (e, data) {
+             jQuery('##{id}_imgs').append(
+              "<span class='item' id ='" + data.result.id + "'><table><tr><td><img class='img-polaroid' target = '"
+               + data.result.img
+               + "' width = '150px' src='"
+               + data.result.thumb
+               + "'/><a href ='#' class ='insert' target = '"
+               + data.result.img
+               + "'>Chèn hình <span class='icon-plus'></span></a>"
+               + "</td><td width='30%' align='left'><a onclick=\"return del('" + data.result.id + "');\" class='delete icon-remove-circle' href='#'></a></td></tr><tr><td colspan='2'><input type='text' class='link'></input></td></tr></table></span>"
+             );
+          },
+
+          progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            jQuery("##{id}_progress " + '.bar').progressbar({
+              value: progress
+            });
+          }
+      });
+      
+      function update_ids_img(){
+        jQuery('.hid').each(function(){
+          var id = jQuery(this).attr('id').replace('_imgs','');
+          
+          var ids = "";
+          jQuery(this).find('.item').each(function(i, e){
+            ids += "," + jQuery(e).attr('id');
+          });
+
+          links = "";
+          jQuery(this).find('.link').each(function(i, e){
+            links += "," + jQuery(e).val();
+          });      
+          
+          jQuery('input[type=hidden][id=' + id + ']').val(ids);
+          jQuery('input[type=hidden][id=' + id.replace('main_setting_','') + '_link]').val(links);
+        });
+  }
+
+
+  });

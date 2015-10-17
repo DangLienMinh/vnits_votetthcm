@@ -1,0 +1,34 @@
+:css
+  input.link{
+    width: 30px;
+  }
+/ - order |= false
+
+= form_for Upload.new, :html => { :multipart => true } do |f|
+  %table{:width => "100%"}
+    %tr
+      %td{:width => "150px"}
+        Hình ảnh:
+      %td{:width => '150px', :align=>'right'}
+        %span.btn.btn-success.fileinput-button
+          %i.icon-plus.icon-white
+          %span Upload hình...
+          /= f.file_field :image, :id => "fileupload", :multiple => true, :class => "btn-primary"
+          = f.file_field :image
+%br/
+#list_images
+  - items.each do |item|
+    %span.item{:id => "#{item.id}"}
+      %table
+        %tbody
+          %tr
+            %td
+              %img.img-polaroid{:src => "#{item.image}", :width => "150px"}/
+            %td{:align => "left", :width => "30%"}
+              %a.delete.icon-remove-circle{:href => "#", :onclick => "return del('#{item.id}');"}
+          / - if order
+          /   %tr
+          /     %td{:colspan => '2'}
+          /       %input{:type=>"number", :class=>"link", :value => item.link}
+              
+%hr/

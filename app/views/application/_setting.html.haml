@@ -1,0 +1,71 @@
+%br/
+= form_for(@item, :url => url_for(:controller => 'admins', :action => :update_config)) do |f|
+  %fieldset
+    - if @item.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@item.errors.count, "error")
+          prohibited this item from being saved:
+        %ul
+          - @item.errors.full_messages.each do |msg|
+            %li= msg
+    %table{:width => '100%'}
+      %tr
+        %td
+          Tên công ty
+        / %td
+        /   = f.text_field :name_shop, :required => true
+      / %tr
+      /   %td
+      /     Email
+      /   %td
+      /     = f.email_field :email, :required => true
+      /   %td
+      / %tr
+      /   %td
+      /     Yahoo
+      /   %td
+      /     = f.text_field :yahoo, :required => true
+      /   %td
+      / %tr
+      /   %td
+      /     Facebook
+      /   %td
+      /     = f.text_field :facebook, :required => true
+      /   %td
+      / %tr
+      /   %td
+      /     Phone
+      /   %td
+      /     = f.text_field :phone
+      /   %td
+      / %tr
+      /   %td
+      /     Di động
+      /   %td
+      /     = f.text_field :hand_phone
+      /   %td
+      / %tr
+      /   %td
+      /     Fax
+      /   %td
+      /     = f.text_field :fax
+      /   %td
+      / %tr
+      /   %td
+      /     Địa chỉ
+      /   %td
+      /     = f.text_field :address, :required => true
+      / %tr
+      /   %td
+      /     Email nhận
+      /   %td
+      /     = f.text_field :emails
+      /   %td
+      %tr
+        %td
+        %td
+          %hr/
+          .actions
+            = f.submit "Hoàn thành", :class => 'btn', :style => "padding: 10px 20px"
+%br/

@@ -75,7 +75,21 @@ aside {
 .no-padding {
     padding: 0;
 }
+.secondary-nav > li > a {
+    padding-top:4px !important; 
+    padding-bottom:0 !important;
+    height: 30px;
+}
+.navbar {min-height:30px !important;}
 
+.no-border {
+    border-radius: 0px!important;
+    margin-bottom: 0px!important;
+}
+
+.navbar-inner {
+    min-height: 0px;
+}
 .navbar-default {
     border-color: rgba(34,34,34,.05);
     font-family: Arial,"Open Sans";
