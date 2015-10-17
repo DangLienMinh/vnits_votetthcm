@@ -33,157 +33,351 @@
 /           %p.text-muted You have to make your websites with love these days!
 
 %section#portfolio.bg-light-gray
-  .container
-    .row
-      .col-lg-12.text-center
-        %h2.section-heading BÌNH CHỌN
-        %h3.section-subheading.text-muted
-          Quý vị khán giả nếu yêu thích các thí sinh của chương trình, hãy nhắn tin bình chọn theo cú pháp: GM (khoảng cách) <Mã số thí sinh> gửi 9799 
-          %br
-          %br
-          * Thí sinh có tổng số lượt nhắn tin bình chọn cao nhất (tính từ số 01 đến khi đóng tổng đài bình chọn trong đêm Gala trực tiếp) sẽ đạt giải “Thí sinh được yêu thích nhất” trị giá 100 triệu đồng của chương trình.
-    .row
-      .col-md-4.col-sm-6.portfolio-item
-        /%a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
-        = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+  .container-fluid
+    .col-lg-12
+      .row
+        .col-lg-12.text-center
+          %h2.section-heading BÌNH CHỌN
+          %h3.section-subheading.text-muted
+            Quý vị khán giả nếu yêu thích các thí sinh của chương trình, hãy nhắn tin bình chọn theo cú pháp: GM (khoảng cách) <Mã số thí sinh> gửi 9799 
+            %br
+            %br
+            * Thí sinh có tổng số lượt nhắn tin bình chọn cao nhất (tính từ số 01 đến khi đóng tổng đài bình chọn trong đêm Gala trực tiếp) sẽ đạt giải “Thí sinh được yêu thích nhất” trị giá 100 triệu đồng của chương trình.
+    .col-lg-9
+      .row
+        .col-md-4.col-sm-6.portfolio-item
+          /%a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
 
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => image_url('portfolio/roundicons.jpg'), :style => "min-height:200px;height:255px;width:100%" }
-        .portfolio-caption
-          %div
-            %ul.list-inline.social-buttons.pull-right
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/roundicons.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Phan Thị Hà Thanh
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/startup-framework.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Đỗ Thị Ngân Thương
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/treehouse.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Vũ Thị Hương
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/golden.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Thanh Phúc
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/escape.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Quế Ngọc Hải
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Mã bình chọn: ABC123
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Mã bình chọn: ABC123
+    .col-lg-3
+      .col-md-12
+        %h3 test
+        .panel.with-nav-tabs.panel-primary.tab-min-width
+          .panel-heading.tab-heading.tab-heading-color
+            %ul.nav.nav-tabs.tab-shrink{:style => "font-size: 0.8em;"}
+              %li.active
+                %a{"data-toggle" => "tab", :href => "#tab1primary"} Primary 1
               %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
+                %a{"data-toggle" => "tab", :href => "#tab2primary"} Primary 2
               %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
+                %a{"data-toggle" => "tab", :href => "#tab3primary"} Primary 3
+          .panel-body
+            .tab-content
+              #tab1primary.tab-pane.fade.in.active Primary 1 djsa da dsa das das das das das das 
+              #tab2primary.tab-pane.fade Primary 2 Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das 
+              #tab3primary.tab-pane.fade Primary 3
+        %h3 test
+        .panel.with-nav-tabs.panel-primary.tab-min-width
+          .panel-heading.tab-heading.tab-heading-color
+            %ul.nav.nav-tabs.tab-shrink{:style => "font-size: 0.8em;"}
+              %li.active
+                %a{"data-toggle" => "tab", :href => "#tab1primary"} Primary 1
               %li
-                %a{:href => "#"}
-                  %i.fa.fa-linkedin
-          %br
-          %br
-          %div{:style=>"clear:both;"}
-            %h4 Phan Thị Hà Thanh
-            %p.text-muted Mã bình chọn: ABC123
-      .col-md-4.col-sm-6.portfolio-item
-        = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => image_url('portfolio/startup-framework.jpg'), :style => "min-height:200px;height:255px;width:100%" }
-        .portfolio-caption
-          %div
-            %ul.list-inline.social-buttons.pull-right
+                %a{"data-toggle" => "tab", :href => "#tab2primary"} Primary 2
               %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-linkedin
-          %br
-          %br
-          %div{:style=>"clear:both;"}
-            %h4 Đỗ Thị Ngân Thương
-            %p.text-muted Mã bình chọn: ABC123
-      .col-md-4.col-sm-6.portfolio-item
-        = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => image_url('portfolio/treehouse.jpg'), :style => "min-height:200px;height:255px;width:100%" }
-        .portfolio-caption
-          %div
-            %ul.list-inline.social-buttons.pull-right
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-linkedin
-          %br
-          %br
-          %div{:style=>"clear:both;"}
-            %h4 Vũ Thị Hương
-            %p.text-muted Mã bình chọn: ABC123
-      .col-md-4.col-sm-6.portfolio-item
-        = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => image_url('portfolio/golden.jpg'), :style => "min-height:200px;height:255px;width:100%" }
-        .portfolio-caption
-          %div
-            %ul.list-inline.social-buttons.pull-right
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-linkedin
-          %br
-          %br
-          %div{:style=>"clear:both;"}
-            %h4 Nguyễn Thị Thanh Phúc
-            %p.text-muted Mã bình chọn: ABC123
-      .col-md-4.col-sm-6.portfolio-item
-        = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => image_url('portfolio/escape.jpg'), :style => "min-height:200px;height:255px;width:100%" }
-        .portfolio-caption
-          %div
-            %ul.list-inline.social-buttons.pull-right
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-linkedin
-          %br
-          %br
-          %div{:style=>"clear:both;"}
-            %h4 Quế Ngọc Hải
-            %p.text-muted Mã bình chọn: ABC123
-      .col-md-4.col-sm-6.portfolio-item
-        = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
-        .portfolio-caption
-          %div
-            %ul.list-inline.social-buttons.pull-right
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-linkedin
-          %br
-          %br
-          %div{:style=>"clear:both;"}
-            %h4 Nguyễn Thị Ánh Viên
-            %p.text-muted Mã bình chọn: ABC123
-
+                %a{"data-toggle" => "tab", :href => "#tab3primary"} Primary 3
+          .panel-body
+            .tab-content
+              #tab1primary.tab-pane.fade.in.active Primary 1 djsa da dsa das das das das das das 
+              #tab2primary.tab-pane.fade Primary 2 Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das 
+              #tab3primary.tab-pane.fade Primary 3
 %section
   .row
     .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1

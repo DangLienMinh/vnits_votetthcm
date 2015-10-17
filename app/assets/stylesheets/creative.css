@@ -80,6 +80,8 @@ aside {
     padding-bottom:0 !important;
     height: 30px;
 }
+
+
 .navbar {min-height:30px !important;}
 
 .no-border {
@@ -99,7 +101,6 @@ aside {
     transition: all .35s;
 }
 .navbar-default.navbar-shrink {
-        padding: 10px 0;
         background-color: #222;
     }
 
@@ -110,28 +111,45 @@ aside {
     /*text-transform: uppercase;*/
     font-family: Arial,"Open Sans";
     /*font-weight: 700;*/
-    color: #f05f40;
+    color: #fff;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: #fff;
 }
+
 
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
     /*text-transform: uppercase;*/
-    font-size: 14px;
+    font-size: 16px;
     /*font-weight: 700;*/
     color: #fff;
+
 }
 
+.navbar-default .nav > li,
+.navbar-default .nav>li:focus {
+    border-right:1px #fff solid;
+}
+
+.navbar-default .nav > li:first-child {
+    border-left:1px #fff solid;
+}
+
+
+.navbar-collapse{
+    border-top:1px #fff solid;
+
+}
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    background-color: #FF8A00;
+    color:#fff;
 }
 
-.navbar-default .nav > li.active>a,
+/*.navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
     color: #f05f40!important;
     background-color: transparent;
@@ -141,8 +159,8 @@ aside {
 .navbar-default .nav>li.active>a:focus:hover {
     background-color: transparent;
 }
-
-@media(min-width:768px) {
+*/
+/*@media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
         background-color: transparent;
@@ -192,7 +210,7 @@ aside {
         color: #f05f40;
     }
 }
-
+*/
 header {
     position: relative;
     width: 100%;
@@ -495,4 +513,48 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+
+/*custom css for navigation bar*/
+
+.nav{
+    float: none;
+    margin: 0px auto;
+    display: table;
+}
+
+.container-fluid{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tab-shrink >li > a{
+    padding: 10px 7px !important;
+    color:#fff!important;
+    background-color: #DF0024 !important;
+}
+
+.tab-shrink >li.active>a{
+    /*background-color: #DF0024 !important;*/
+    background-color: #fff !important;
+    color:#DF0024!important;
+}
+.tab-shrink >li>a:hover{
+    background-color: #FF8A00 !important;
+    color:#fff!important;
+
+}
+
+.tab-heading{
+    padding: 5px 0px 0px 0px !important;
+}
+.tab-min-width{
+    min-width: 280px;
+    border: 1px #DF0024 solid!important;
+}
+.tab-heading-color{
+    color: #fff !important;
+    border-bottom: none!important;
+    background-color: #DF0024 !important;
 }
