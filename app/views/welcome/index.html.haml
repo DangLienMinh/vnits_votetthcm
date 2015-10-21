@@ -2,49 +2,48 @@
 /   .header-content
 /     .header-content-inner
 /       %h1 Your Favorite Source of Free Bootstrap Themes
-
-/ %section#services
-/   .container
-/     .row
-/       .col-lg-12.text-center
-/         %h2.section-heading At Your Service
-/         %hr.primary
-/   .container
-/     .row
-/       .col-lg-3.col-md-6.text-center
-/         .service-box
-/           %i.fa.fa-4x.fa-heart.wow.bounceIn.text-primary
-/           %h3 Sturdy Templates
-/           %p.text-muted Our templates are updated regularly so they don't break.
-/       .col-lg-3.col-md-6.text-center
-/         .service-box
-/           %i.fa.fa-4x.fa-heart.wow.bounceIn.text-primary{"data-wow-delay" => ".1s"}
-/           %h3 Ready to Ship
-/           %p.text-muted You can use this theme as is, or you can make changes!
-/       .col-lg-3.col-md-6.text-center
-/         .service-box
-/           %i.fa.fa-4x.fa-heart.wow.bounceIn.text-primary{"data-wow-delay" => ".2s"}
-/           %h3 Up to Date
-/           %p.text-muted We update dependencies to keep things fresh.
-/       .col-lg-3.col-md-6.text-center
-/         .service-box
-/           %i.fa.fa-4x.fa-heart.wow.bounceIn.text-primary{"data-wow-delay" => ".3s"}
-/           %h3 Made with Love
-/           %p.text-muted You have to make your websites with love these days!
-
 %section#portfolio.bg-light-gray
   .container-fluid
     .col-lg-12
       .row
-        .col-lg-12.text-center
+        .col-lg-9.text-center
           %h2.section-heading BÌNH CHỌN
-          %h3.section-subheading.text-muted
-            Quý vị khán giả nếu yêu thích các thí sinh của chương trình, hãy nhắn tin bình chọn theo cú pháp: GM (khoảng cách) <Mã số thí sinh> gửi 9799 
-            %br
-            %br
-            * Thí sinh có tổng số lượt nhắn tin bình chọn cao nhất (tính từ số 01 đến khi đóng tổng đài bình chọn trong đêm Gala trực tiếp) sẽ đạt giải “Thí sinh được yêu thích nhất” trị giá 100 triệu đồng của chương trình.
+
     .col-lg-9
+      .row{:style => "margin-bottom:12px;"}
+        .col-lg-4
+          %select.selectpicker{:style => "width:100%"}
+            %option Loại đối tượng
+            %option Vận động viên
+            %option Huấn luyện viên
+            %option Nhóm
+        .col-lg-4
+          %select.selectpicker{:style => "width:100%"}
+            %option.selected Nhóm đối tượng
+            %option Tài năng
+            %option Khuyết tật tài năng
+            %option E-Sport
+        .col-lg-4  
+          %select.selectpicker{:style => "width:100%"}
+            %option.selected Môn thể thao
+            %option Bóng đá
+            %option Cử tạ
+            %option Băn cung
       .row
+        %form{:role => "form"}
+          .col-md-12
+            .form-group
+              .input-group.input-group-lg
+                %input.form-control{:placeholder => "Mã hoặc họ tên VĐV/HLV/Nhóm", :type => "text"}/
+                .input-group-btn
+                  %button.btn.btn-primary{:type => "submit"}
+                    %i.glyphicon.glyphicon-search
+      .row
+        .col-md-12
+          %h3.page-header
+            Huấn luyện viên/Vận động viên tài năng
+
+      .row.black-icon
         .col-md-4.col-sm-6.portfolio-item
           /%a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
@@ -52,397 +51,749 @@
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/roundicons.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/roundicons.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Phan Thị Hà Thanh
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/startup-framework.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/startup-framework.jpg') }
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Đỗ Thị Ngân Thương
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/treehouse.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/treehouse.jpg') }
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Vũ Thị Hương
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/golden.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/golden.jpg') }
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Thanh Phúc
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/escape.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/escape.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Quế Ngọc Hải
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Ánh Viên
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
+      .row
+        .col-md-12
+          %a.btn.btn-primary.pull-right{:href => "#"}
+            Xem thêm
+            %span.glyphicon.glyphicon-chevron-right
+      %br
+      %a{:href => "#"}
+        %img.img-responsive{:alt => "", :src => "http://placehold.it/1000x80"}
+      %br
+      .row
+        .col-md-12
+          %h3.page-header
+            Huấn luyện viên/Vận động viên khuyết tật tài năng
+      .row.black-icon.clearfix
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Ánh Viên
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Ánh Viên
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Ánh Viên
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Ánh Viên
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Ánh Viên
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg') }
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Ánh Viên
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
+      .row
+        .col-md-12
+          %a.btn.btn-primary.pull-right{:href => "#"}
+            Xem thêm
+            %span.glyphicon.glyphicon-chevron-right
+      %br
+      %a{:href => "#"}
+        %img.img-responsive{:alt => "", :src => "http://placehold.it/1000x80"}
+      %br
+      .row
+        .col-md-12
+          %h3.page-header
+            Nhóm E-Sport
+      .row.black-icon.clearfix
         .col-md-4.col-sm-6.portfolio-item
           = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
-            %img.img-responsive{:alt => "", :src => image_url('portfolio/dreams.jpg'), :style => "min-height:200px;height:255px;width:100%" }
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
           .portfolio-caption
             %div
               %ul.list-inline.social-buttons.pull-right
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-twitter
+                    %i.fa.fa-thumbs-o-up &nbsp;4
                 %li
                   %a{:href => "#"}
                     %i.fa.fa-facebook
                 %li
                   %a{:href => "#"}
-                    %i.fa.fa-linkedin
+                    %i.fa.fa-google-plus
             %br
             %br
             %div{:style=>"clear:both;"}
               %h4 Nguyễn Thị Ánh Viên
-              %p.text-muted Mã bình chọn: ABC123
+              %p.text-muted Soạn BC1 gửi 5000
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-thumbs-o-up &nbsp;4
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-google-plus
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Soạn BC1 gửi 5000
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-thumbs-o-up &nbsp;4
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-google-plus
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Soạn BC1 gửi 5000
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-thumbs-o-up &nbsp;4
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-google-plus
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Soạn BC1 gửi 5000
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg')}
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-thumbs-o-up &nbsp;4
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-google-plus
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Soạn BC1 gửi 5000
+        .col-md-4.col-sm-6.portfolio-item
+          = link_to(welcome_peopledetail_path,{ :class => "portfolio-link"})  do
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+            %img.img-responsive.avatar-home-page{:alt => "", :src => image_url('portfolio/dreams.jpg') }
+          .portfolio-caption
+            %div
+              %ul.list-inline.social-buttons.pull-right
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-thumbs-o-up &nbsp;4
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-google-plus
+            %br
+            %br
+            %div{:style=>"clear:both;"}
+              %h4 Nguyễn Thị Ánh Viên
+              %p.text-muted Soạn BC1 gửi 5000
+      .row
+        .col-md-12
+          %a.btn.btn-primary.pull-right{:href => "#"}
+            Xem thêm
+            %span.glyphicon.glyphicon-chevron-right
+      %br
+      %a{:href => "#"}
+        %img.img-responsive{:alt => "", :src => "http://placehold.it/1000x80"}
     .col-lg-3
-      .col-md-12
-        %h3 test
-        .panel.with-nav-tabs.panel-primary.tab-min-width
-          .panel-heading.tab-heading.tab-heading-color
-            %ul.nav.nav-tabs.tab-shrink{:style => "font-size: 0.8em;"}
-              %li.active
-                %a{"data-toggle" => "tab", :href => "#tab1primary"} Primary 1
-              %li
-                %a{"data-toggle" => "tab", :href => "#tab2primary"} Primary 2
-              %li
-                %a{"data-toggle" => "tab", :href => "#tab3primary"} Primary 3
-          .panel-body
+      .row
+        .col-md-12
+          %h3.no-padding-margin-top Xếp hạng cá nhân
+          .panel.with-nav-tabs.panel-primary.tab-min-width
+            .panel-heading.tab-heading.tab-heading-color
+              %ul.nav.nav-tabs.tab-shrink{:style => "font-size: 0.8em;"}
+                %li.active
+                  %a{"data-toggle" => "tab", :href => "#tab1primary"} Primary 1
+                %li
+                  %a{"data-toggle" => "tab", :href => "#tab2primary"} Primary 2
+                %li
+                  %a{"data-toggle" => "tab", :href => "#tab3primary"} Primary 3
+
             .tab-content
-              #tab1primary.tab-pane.fade.in.active Primary 1 djsa da dsa das das das das das das 
-              #tab2primary.tab-pane.fade Primary 2 Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das 
+              #tab1primary.tab-pane.fade.in.active
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/startup-framework-fee1ddc169c063ff08810d7f4c97ab03810efe407fbf532f75207431a82301dc.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/roundicons-238abb6946e91bc835744a2aeee03a1b4fd4003096e439c6b426812cdaaed806.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/treehouse-24a34a4ff26a777c6f5f3309b468caff8c2d521132c8f8d65b4d29fe2016c254.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/golden-38c515c139334727dd41f8766c9b14107ac81cea20599e5b4cdad6a6c2a98719.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/escape-354bc3b0a36586d73d23bba73e019f6a40420e85d359868ce35eff2fb77a2025.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/dreams-254821611de744c25275e0d1f568bda851a72172789791b09c8a77d1b7c6840e.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+              #tab2primary.tab-pane.fade
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/startup-framework-fee1ddc169c063ff08810d7f4c97ab03810efe407fbf532f75207431a82301dc.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh1
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/roundicons-238abb6946e91bc835744a2aeee03a1b4fd4003096e439c6b426812cdaaed806.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/treehouse-24a34a4ff26a777c6f5f3309b468caff8c2d521132c8f8d65b4d29fe2016c254.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/golden-38c515c139334727dd41f8766c9b14107ac81cea20599e5b4cdad6a6c2a98719.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/escape-354bc3b0a36586d73d23bba73e019f6a40420e85d359868ce35eff2fb77a2025.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/dreams-254821611de744c25275e0d1f568bda851a72172789791b09c8a77d1b7c6840e.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
               #tab3primary.tab-pane.fade Primary 3
-        %h3 test
-        .panel.with-nav-tabs.panel-primary.tab-min-width
-          .panel-heading.tab-heading.tab-heading-color
-            %ul.nav.nav-tabs.tab-shrink{:style => "font-size: 0.8em;"}
-              %li.active
-                %a{"data-toggle" => "tab", :href => "#tab1primary"} Primary 1
-              %li
-                %a{"data-toggle" => "tab", :href => "#tab2primary"} Primary 2
-              %li
-                %a{"data-toggle" => "tab", :href => "#tab3primary"} Primary 3
-          .panel-body
+          %h3 Xếp hạng tập thể
+          .panel.with-nav-tabs.panel-primary.tab-min-width
+            .panel-heading.tab-heading.tab-heading-color
+              %ul.nav.nav-tabs.tab-shrink{:style => "font-size: 0.8em;"}
+                %li.active
+                  %a{"data-toggle" => "tab", :href => "#tab1primary"} Primary 1
+                %li
+                  %a{"data-toggle" => "tab", :href => "#tab2primary"} Primary 2
+                %li
+                  %a{"data-toggle" => "tab", :href => "#tab3primary"} Primary 3
+
             .tab-content
-              #tab1primary.tab-pane.fade.in.active Primary 1 djsa da dsa das das das das das das 
-              #tab2primary.tab-pane.fade Primary 2 Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das Primary 1 djsa da dsa das das das das das das 
+              #tab1primary.tab-pane.fade.in.active
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/startup-framework-fee1ddc169c063ff08810d7f4c97ab03810efe407fbf532f75207431a82301dc.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/roundicons-238abb6946e91bc835744a2aeee03a1b4fd4003096e439c6b426812cdaaed806.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/treehouse-24a34a4ff26a777c6f5f3309b468caff8c2d521132c8f8d65b4d29fe2016c254.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/golden-38c515c139334727dd41f8766c9b14107ac81cea20599e5b4cdad6a6c2a98719.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/escape-354bc3b0a36586d73d23bba73e019f6a40420e85d359868ce35eff2fb77a2025.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/dreams-254821611de744c25275e0d1f568bda851a72172789791b09c8a77d1b7c6840e.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+              #tab2primary.tab-pane.fade
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/startup-framework-fee1ddc169c063ff08810d7f4c97ab03810efe407fbf532f75207431a82301dc.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/roundicons-238abb6946e91bc835744a2aeee03a1b4fd4003096e439c6b426812cdaaed806.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/treehouse-24a34a4ff26a777c6f5f3309b468caff8c2d521132c8f8d65b4d29fe2016c254.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/golden-38c515c139334727dd41f8766c9b14107ac81cea20599e5b4cdad6a6c2a98719.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/escape-354bc3b0a36586d73d23bba73e019f6a40420e85d359868ce35eff2fb77a2025.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                .row.right-sidebar
+                  .col-md-4.nopadding
+                    %a{:href => "#"}
+                      %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/dreams-254821611de744c25275e0d1f568bda851a72172789791b09c8a77d1b7c6840e.jpg"}
+                  .col-md-8.text-center
+                    %a{:href => "#"}
+                      %h5.nopadding Phan Thị Hà Thanh
+                      %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
               #tab3primary.tab-pane.fade Primary 3
-%section
-  .row
-    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-      .post-preview
-        /%a{:href => "post.html"}
-        =link_to welcome_newsdetail_path do
-          %h2.post-title
-            Sáng nay 14/10: Chính thức khai mạc Đại hội Đại biểu Đảng bộ TPHCM lần thứ X
-          %h3.post-subtitle
-            Sáng nay 14/10, tại Hội trường TP, Đại hội Đại biểu Đảng bộ TP lần thứ X, nhiệm kỳ 2015 – 2020 chính thức khai mạc...
-        %p.post-meta
-          Posted by
-          %a{:href => "#"} Start Bootstrap
-          on September 24, 2014
-      %hr
-      .post-preview
-        =link_to welcome_newsdetail_path do
-          %h2.post-title
-            Chung tay xây dựng TPHCM có chất lượng sống tốt, văn minh, hiện đại, nghĩa tình
-          %h3.post-subtitle
-            Cuối tuần qua, Đảng ủy Khối cơ sở Bộ Văn hóa, Thể thao và Du lịch tại TPHCM tổ chức Hội thảo chuyên đề “Phát huy vai trò, kinh nghiệm, thế mạnh của các...
-        %p.post-meta
-          Posted by
-          %a{:href => "#"} Start Bootstrap
-          on September 18, 2014
-      %hr
-      .post-preview
-        =link_to welcome_newsdetail_path do
-          %h2.post-title
-            Ngày 14/10, Đại hội Đại biểu Đảng bộ TPHCM lần thứ X chính thức khai mạc
-          %h3.post-subtitle
-            Đại hội Đại biểu Đảng bộ TP lần thứ X, nhiệm kỳ 2015 – 2020, sẽ diễn ra trong 5 ngày, từ 13 đến 17/10...
-        %p.post-meta
-          Posted by
-          %a{:href => "#"} Start Bootstrap
-          on August 24, 2014
-      %hr
-        .post-preview
-          =link_to welcome_newsdetail_path do
-            %h2.post-title
-              Thi vẽ tranh cổ động về “Tình hữu nghị Việt Nam-Cuba”
-            %h3.post-subtitle
-              Nhân kỷ niệm 55 năm Việt Nam-Cuba thiết lập quan hệ ngoại giao (1960-2015) và kỷ niệm 57 năm Ngày cách mạng Cuba thành công, ngày 10/9, Liên hiệp...
-          %p.post-meta
-            Posted by
-            %a{:href => "#"} Start Bootstrap
-            on July 8, 2014
-        %hr
-          / Pager
-          %ul.pager
-            %li.next
-              %a{:href => "#"} Older Posts &rarr;
+          %a{:href => "#"}
+            %img.img-responsive{:alt => "", :src => "http://placehold.it/900x480"}
 
 
-%section#contact
+/     .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+/       .post-preview
+/         /%a{:href => "post.html"}
+/         =link_to welcome_newsdetail_path do
+/           %h2.post-title
+/             Sáng nay 14/10: Chính thức khai mạc Đại hội Đại biểu Đảng bộ TPHCM lần thứ X
+/           %h3.post-subtitle
+/             Sáng nay 14/10, tại Hội trường TP, Đại hội Đại biểu Đảng bộ TP lần thứ X, nhiệm kỳ 2015 – 2020 chính thức khai mạc...
+/         %p.post-meta
+/           Posted by
+/           %a{:href => "#"} Start Bootstrap
+/           on September 24, 2014
+/       %hr
+/       .post-preview
+/         =link_to welcome_newsdetail_path do
+/           %h2.post-title
+/             Chung tay xây dựng TPHCM có chất lượng sống tốt, văn minh, hiện đại, nghĩa tình
+/           %h3.post-subtitle
+/             Cuối tuần qua, Đảng ủy Khối cơ sở Bộ Văn hóa, Thể thao và Du lịch tại TPHCM tổ chức Hội thảo chuyên đề “Phát huy vai trò, kinh nghiệm, thế mạnh của các...
+/         %p.post-meta
+/           Posted by
+/           %a{:href => "#"} Start Bootstrap
+/           on September 18, 2014
+/       %hr
+/       .post-preview
+/         =link_to welcome_newsdetail_path do
+/           %h2.post-title
+/             Ngày 14/10, Đại hội Đại biểu Đảng bộ TPHCM lần thứ X chính thức khai mạc
+/           %h3.post-subtitle
+/             Đại hội Đại biểu Đảng bộ TP lần thứ X, nhiệm kỳ 2015 – 2020, sẽ diễn ra trong 5 ngày, từ 13 đến 17/10...
+/         %p.post-meta
+/           Posted by
+/           %a{:href => "#"} Start Bootstrap
+/           on August 24, 2014
+/       %hr
+/         .post-preview
+/           =link_to welcome_newsdetail_path do
+/             %h2.post-title
+/               Thi vẽ tranh cổ động về “Tình hữu nghị Việt Nam-Cuba”
+/             %h3.post-subtitle
+/               Nhân kỷ niệm 55 năm Việt Nam-Cuba thiết lập quan hệ ngoại giao (1960-2015) và kỷ niệm 57 năm Ngày cách mạng Cuba thành công, ngày 10/9, Liên hiệp...
+/           %p.post-meta
+/             Posted by
+/             %a{:href => "#"} Start Bootstrap
+/             on July 8, 2014
+/         %hr
+/           / Pager
+/           %ul.pager
+/             %li.next
+/               %a{:href => "#"} Older Posts &rarr;
+
+%section#services
   .container
     .row
-      .col-lg-8.col-lg-offset-2.text-center
-        %h2.section-heading Let's Get In Touch!
+      .col-lg-12.text-center
+        %h2.section-heading Nhà Tài Trợ
         %hr.primary
-          %p Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!
-      .col-lg-4.col-lg-offset-2.text-center
-        %i.fa.fa-phone.fa-3x.wow.bounceIn
-        %p 123-456-6789
-      .col-lg-4.text-center
-        %i.fa.fa-envelope-o.fa-3x.wow.bounceIn{"data-wow-delay" => ".1s"}
-        %p
-          %a{:href => "mailto:your-email@your-domain.com"} feedback@startbootstrap.com
+  .container
+    .row
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %img.img-responsive{:alt => "", :src => image_url('tt1.png')}
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %img.img-responsive{:alt => "", :src => image_url('tt2.png')}
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %img.img-responsive{:alt => "", :src => image_url('tt3.png')}
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %img.img-responsive{:alt => "", :src => image_url('tt4.png')}
+

@@ -23,19 +23,49 @@
 
 %nav.navbar-default#mainNav.navbar-static-top.navbar-shrink.navbar-default{:style => "background-color:#DF0024;"}
   .container-fluid
-    %a.brand{:href => "#"}
-      %img.img-responsive.img-center{:alt => "", :src => image_url('ic_logo.png'),:style=>"float:left;"}
+    .row
+      .col-md-3{:style => "padding-top: 13px"}
+        %a{:href => "#"}
+          %img.img-responsive.img-center{:alt => "", :src => image_url('ic_logo.png')}
+      .col-md-7{:style => "color:#fff;text-align:center;"}
+        %a{:href => "#"}
+          %img.img-responsive.pull-right{:alt => "", :src => "http://placehold.it/600x90"}
     .navbar-header
-      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+      %%button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
         %span.sr-only Toggle navigation
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-  #bs-example-navbar-collapse-1.collapse.navbar-collapse
-    %ul.nav.navbar-nav
+  #bs-example-navbar-collapse-1.collapse.navbar-collapse.clearfix
+    %ul.nav.navbar-nav{:style => "text-transform: uppercase;"}
       %li
-        %a{:href => "#"} Trang chủ
+        =link_to welcome_index_path do
+          %i.fa.fa-home
+      %li
+        =link_to "Tin tức","http://thethaohcm.vn/"
+      %li
+        =link_to welcome_newsdetail_path do
+          Giới thiệu
+      %li
+        =link_to welcome_newsdetail_path do
+          Thể lệ
       %li
         %a{:href => "#"} Bình chọn
       %li
         %a{:href => "#"} Liên hệ
+    .row
+      .col-md-9.nopadding
+        .embed-responsive.embed-responsive-16by9
+          %iframe.embed-responsive-item{:src => "//www.youtube.com/embed/NOcjwN3jkZ4?autoplay=0"}
+      / /.col-md-8
+      .col-md-3.nopadding
+        %a{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "http://placehold.it/700x295",:style => "width:100%"}
+        %a{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "http://placehold.it/700x295",:style => "width:100%"}
+        %a{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "http://placehold.it/700x295",:style => "width:100%"}
+        %a{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "http://placehold.it/700x295",:style => "width:100%"}
+
+  / /.col-md-4

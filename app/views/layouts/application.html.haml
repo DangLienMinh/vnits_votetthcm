@@ -8,19 +8,11 @@
   %body#page-top
     /header start
     = render 'top_menu'
-    /= render 'admin_nav'
-
-    / header end
 
     / main content start
     = render 'layouts/messages'
     = yield
+    = render 'footer'
     /main content end
-    = render 'shared/login_form'
+
     / Placed js at the end of the document so the pages load faster
-    
-:javascript
-  var first_login = "#{session[:first_login].to_json}";
-  initalize();
-- session[:first_login] = true
-      

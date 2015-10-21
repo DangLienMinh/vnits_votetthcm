@@ -1,62 +1,202 @@
 .container
   .row
-    .col-lg-8.col-lg-offset-2
+    .col-md-9
       .modal-body
         / Project Details Go Here
         %h2 DUMBO NGUYỄN & KRISTINA
         %p.item-intro.text-muted Mã số : 01
-        #jssor_1{:style => "position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; background-color: #24262e;"}
-          / Loading Screen
-          %div{"data-u" => "loading", :style => "position: absolute; top: 0px; left: 0px;"}
-            %div{:style => "filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"}
-            %div{:style => "position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"}
-          %div{"data-u" => "slides", :style => "cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;"}
-            %div{:style => "display: none;"}
-              %img{"data-u" => "image", :src => image_url("slider/01.jpg")}/
-
-            %div{:style => "display: none;"}
-              %img{"data-u" => "image", :src => image_url("slider/02.png")}/
-
-            %div{:style => "display: none;"}
-              %img{"data-u" => "image", :src => image_url("slider/03.jpg")}/
-
-          / Thumbnail Navigator
-          .jssort01{"data-autocenter" => "1", "data-u" => "thumbnavigator", :style => "position:absolute;left:0px;bottom:0px;width:800px;height:100px;"}
-            / Thumbnail Item Skin Begin
-            %div{"data-u" => "slides", :style => "cursor: default;"}
-              .p{"data-u" => "prototype"}
-                .w
-                  .t{"data-u" => "thumbnailtemplate"}
-                .c
-            / Thumbnail Item Skin End
-          / Arrow Navigator
-          %span.jssora05l{"data-u" => "arrowleft", :style => "top:158px;left:8px;width:40px;height:40px;"}
-          %span.jssora05r{"data-u" => "arrowright", :style => "top:158px;right:8px;width:40px;height:40px;"}
-          %a{:href => "http://www.jssor.com", :style => "display:none"} Jssor Slider
+        #myCarousel.carousel.slide{"data-ride" => "carousel"}
+          / Indicators
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+            %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+            %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+            %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
+          / Wrapper for slides
+          .carousel-inner{:role => "listbox"}
+            .item.active
+              %img{:alt => "Chania", :height => "345", :src => image_url("slider/01.jpg"), :width => "460"}
+                .carousel-caption
+                  %h3 Chania
+                  %p The atmosphere in Chania has a touch of Florence and Venice.
+            .item
+              %img{:alt => "Chania", :height => "345", :src => image_url("slider/01.jpg"), :width => "460"}
+                .carousel-caption
+                  %h3 Chania
+                  %p The atmosphere in Chania has a touch of Florence and Venice.
+            .item
+              %img{:alt => "Flower", :height => "345", :src => image_url("slider/02.png"), :width => "460"}
+                .carousel-caption
+                  %h3 Flowers
+                  %p Beatiful flowers in Kolymbari, Crete.
+            .item
+              %img{:alt => "Flower1", :height => "345", :src => image_url("slider/03.jpg"), :width => "460"}
+                .carousel-caption
+                  %h3 Flowers1
+                  %p Beatiful flowers in Kolymbari, Crete.
+          %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+            %span.sr-only Previous
+          %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+            %span.sr-only Next
 
         %div.text-justify
           %p  Dumbo tên thật là Nguyễn Hữu Quốc Vinh. Anh sinh năm 1989 tại Việt Nam và sau đó sang Mỹ định cư từ năm 1999. Dumbo bắt đầu con đường nhảy múa năm 2006 và sau đó thành lập nhóm Poreotics chuyên về Popping, Choreography và Poreotix vào năm 2007. Sau khi thành lập, Poreotics đã đạt nhiều thành công như: Vô địch giải giải Hip hop Mỹ trong hai năm 2009, 2010 và đạt ngôi quán quân mùa thứ 5 của cuộc thi American Best Dance Crew, đạt huy chương bạc Hip hop International Worldwide 2010.
           %p Sau những thành công với các giải đấu, Dumbo và Poreotics được mời tham gia các chương trình lớn của các ca sĩ nổi tiếng như: Là nhóm nhảy mở màn và là khách mời đặc biệt trong chuyến lưu diễn vòng quanh thế giới của Justin Bieber, tham gia biên đạo MV The Lazy Song của Bruno Mars và MV Somebody to love của Usher… 
-          %p 
-            Thành tích:
-            %ul{style: "font-size:13px;"}
-              %li{:style => "text-align: justify;"}
-                Giải nhất: Kupa Boi-mar Open 2007, Vraca Open 2007, Amarand-M Open 2008.
-              %li{:style => "text-align: justify;"}
-                Giải nhì: Amarand-M Open 2007, Sliven Cup 2007
-              %li{:style => "text-align: justify;"}
-                \&nbsp;Xếp hạng thứ 13 của Giải vô địch nước Đức (trên 10 Vũ điệu)
-              %li{:style => "text-align: justify;"}
-                \&nbsp;Đứng thứ 5 trên Bảng xếp hạng cho thanh niên (thể loại Latin) của Đức
-              %li{:style => "text-align: justify;"}
-                Vào đến vòng chung kết với thứ hạng cao trong nhiều cuộc thi lớn nhất nước Đức
-              %li{:style => "text-align: justify;"}
-                Giải nhì giải Thế giới mở rộng Fred Astaire cho vũ công chuyên nghiệp - điệu Rising Star Smooth.
-              %li{:style => "text-align: justify;"}
-                Đứng thứ 3 giải Vô địch Dancesport toàn nước Mỹ - dành cho vũ công chuyên nghiệp.
-              %li{:style => "text-align: justify;"}
-                Nhiều lần vô địch khu vực Giải New England và New England mở rộng dành cho vũ công chuyên nghiệp - Các điệu Smooth, Rhythm.
+          %div
+            %h4 Thành tích:
+            %ul{:style => "list-style:none"}
+              %li
+                .alert.alert-success{:role => "alert"}
+                  %span.sr-only Error:
+                  Giải nhất: Kupa Boi-mar Open 2007, Vraca Open 2007, Amarand-M Open 2008. 
+              %li
+                .alert.alert-success{:role => "alert"}
+                  %span.sr-only Error:
+                  Giải nhì: Amarand-M Open 2007, Sliven Cup 2007
+              %li
+                .alert.alert-success{:role => "alert"}
+                  %span.sr-only Error:
+                  Xếp hạng thứ 13 của Giải vô địch nước Đức (trên 10 Vũ điệu)
+              %li
+                .alert.alert-success{:role => "alert"}
+                  %span.sr-only Error:
+                  Đứng thứ 5 trên Bảng xếp hạng cho thanh niên (thể loại Latin) của Đức
+              %li
+                .alert.alert-success{:role => "alert"}
+                  %span.sr-only Error:
+                  Vào đến vòng chung kết với thứ hạng cao trong nhiều cuộc thi lớn nhất nước Đức
+              %li
+                .alert.alert-success{:role => "alert"}
+                  %span.sr-only Error:
+                  Giải nhì giải Thế giới mở rộng Fred Astaire cho vũ công chuyên nghiệp - điệu Rising Star Smooth.
+              %li
+                .alert.alert-success{:role => "alert"}
+                  %span.sr-only Error:
+                  Đứng thứ 3 giải Vô địch Dancesport toàn nước Mỹ - dành cho vũ công chuyên nghiệp.
+              %li
+                .alert.alert-success{:role => "alert"}
+                  %span.sr-only Error:
+                  Nhiều lần vô địch khu vực Giải New England và New England mở rộng dành cho vũ công chuyên nghiệp - Các điệu Smooth, Rhythm.
           %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
             %i.fa.fa-times
             Trở về
-= render 'detail_slider'
+          %br
+          %br
+          %img.img-responsive{:alt => "", :src => "http://placehold.it/1000x80"}
+    %br
+    .col-md-3
+      .modal-body
+        .row
+          .col-md-12
+            .panel.with-nav-tabs.panel-primary.tab-min-width
+              .panel-heading.tab-heading.tab-heading-color
+                %ul.nav.nav-tabs.tab-shrink{:style => "font-size: 0.8em;"}
+                  %li.active
+                    %a{"data-toggle" => "tab", :href => "#tab1primary"} Cùng môn
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#tab2primary"} Top 10 môn x
+
+
+              .tab-content
+                #tab1primary.tab-pane.fade.in.active
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/startup-framework-fee1ddc169c063ff08810d7f4c97ab03810efe407fbf532f75207431a82301dc.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/roundicons-238abb6946e91bc835744a2aeee03a1b4fd4003096e439c6b426812cdaaed806.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/treehouse-24a34a4ff26a777c6f5f3309b468caff8c2d521132c8f8d65b4d29fe2016c254.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/golden-38c515c139334727dd41f8766c9b14107ac81cea20599e5b4cdad6a6c2a98719.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/escape-354bc3b0a36586d73d23bba73e019f6a40420e85d359868ce35eff2fb77a2025.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/dreams-254821611de744c25275e0d1f568bda851a72172789791b09c8a77d1b7c6840e.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                #tab2primary.tab-pane.fade
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/startup-framework-fee1ddc169c063ff08810d7f4c97ab03810efe407fbf532f75207431a82301dc.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/roundicons-238abb6946e91bc835744a2aeee03a1b4fd4003096e439c6b426812cdaaed806.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/treehouse-24a34a4ff26a777c6f5f3309b468caff8c2d521132c8f8d65b4d29fe2016c254.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/golden-38c515c139334727dd41f8766c9b14107ac81cea20599e5b4cdad6a6c2a98719.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/escape-354bc3b0a36586d73d23bba73e019f6a40420e85d359868ce35eff2fb77a2025.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+                  .row.right-sidebar
+                    .col-md-4.nopadding
+                      %a{:href => "#"}
+                        %img.img-responsive.right-sidebar-img{:alt => "", :src => "http://votetthcm.herokuapp.com/assets/portfolio/dreams-254821611de744c25275e0d1f568bda851a72172789791b09c8a77d1b7c6840e.jpg"}
+                    .col-md-8.text-center
+                      %a{:href => "#"}
+                        %h5.nopadding Phan Thị Hà Thanh
+                        %i{:style => "font-size:12px;"} Số điểm bình chọn: 250
+          %a{:href => "#"}
+            %img.img-responsive{:alt => "", :src => "http://placehold.it/700x300"}

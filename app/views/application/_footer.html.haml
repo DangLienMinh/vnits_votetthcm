@@ -1,0 +1,30 @@
+#fb-root
+:javascript
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "http://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=772848092829327";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+%footer.text-center
+  .footer-above
+    .container
+      .row
+        .footer-col.col-md-4
+          %h3 Follow Thể Thao HCM
+          .fb-page{"data-adapt-container-width" => "true", "data-hide-cover" => "false", "data-href" => "https://www.facebook.com/thethaothanhpho", "data-show-facepile" => "true", "data-show-posts" => "false", "data-small-header" => "false"}
+          
+        .footer-col.col-md-4
+          .row          
+            %div.footer-text
+              %br Tòa soạn: 40/25 Bùi Viện, Phường Phạm Ngũ Lão, Quận 1, TP.HCM.
+              %br Điện thoại: (08)38375152 - 38375138. Fax (08) 38375173.
+              %br Giấy phép số 28/GP-BTTTT do Bộ TT&TT cấp ngày 5/1/2012
+              %br Liên hệ quảng cáo: 0903012736
+              %br Email: quangcao.thethaohcm@gmail.com 
+        .footer-col.col-md-4
+          .row
+            %div.footer-text
+              %br Quyền tổng biên tập: Hà Huy Tường
+              %br Mọi hành vi vi phạm bản quyền hoàn toàn chịu trách nhiệm trước pháp luật Việt Nam.
